@@ -79,7 +79,6 @@ if(isset($_POST['submit']))
 		<div class="app-content">
 			
 			<?php include('include/header.php');?>
-			<?php echo "heiiiiii";?>
 			<!-- end: TOP NAVBAR -->
 			<div class="main-content" >
 				<div class="wrap-content container" id="container">
