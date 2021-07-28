@@ -173,7 +173,7 @@ if(isset($_POST['submit']))
 																Time
 																
 															</label>
-															<input class="form-control" name="apptime" id="timepicker1" required="required">eg : 10:00 PM
+															<input class="form-control" name="apptime" id="timepicker1" required="required" placeholder="choose between 10 am to 3 pm">eg : 10:00 AM
 														</div>														
 														
 														<button type="submit" name="submit" class="btn btn-o btn-primary">
