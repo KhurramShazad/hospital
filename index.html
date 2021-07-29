@@ -7,6 +7,7 @@
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/responsiveslides.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/stylesheet.css">
 
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
@@ -21,40 +22,55 @@
 			});
 		});
 	</script>
+	<!-- <style>
+		.menu a{
+			text-decoration: none; color: white; font-size: medium;
+			padding: 20px;
+    line-height: 38px;
+    margin-right: 30px;
+		}
+
+		.menu{
+			display: flex;
+    justify-content: flex-end;
+		}
+
+		.navbar{
+			margin-bottom: 0;
+		}
+
+		.text-right{
+			text-align: right;
+		}
+	</style> -->
 </head>
 
 <body>
-	<!--start-wrap-->
-
-	<!--start-header-->
-	<div class="header">
-		<div class="wrap">
-			<!--start-logo-->
-			<div class="logo">
-				<a href="index.html" style="font-size: 30px;">Hospital Management system</a>
-			</div>
-			<!--end-logo-->
-			<!--start-top-nav-->
-			<div class="top-nav">
-				<ul>
-					<li class="active"><a href="index.html">Home</a></li>
-
-					<li><a href="contact.php">contact</a></li>
-				</ul>
-			</div>
+			
+			<nav class="navbar navbar-dark bg-primary" style="height: 80px; width:auto;"> 
+				<div class="logo">
+					<a href="index.html" style="font-size: 30px; color: white; text-decoration: none;">Hospital Management system</a>
+				</div>
+				<div class="menu">
+					<a href="index.html">Home</a>
+				
+						<a href="contact.php">contact</a>
+					
+				</div>
+			</nav>
 			<div class="clear"> </div>
 			<!--end-top-nav-->
-		</div>
+		<!-- </div> -->
 		<!--end-header-->
-	</div>
+	<!-- </div> -->
 	<div class="clear"> </div>
 	<!--start-image-slider---->
 	<div class="image-slider">
 		<!-- Slideshow 1 -->
 		<ul class="rslides" id="slider1">
-			<li><img src="images/img3.jpg" alt=""></li>
-			<li><img src="images/img2.jpg" alt=""></li>
 			<li><img src="images/img1.jpg" alt=""></li>
+			<li><img src="images/img2.jpg" alt=""></li>
+			<li><img src="images/img3.jpg" alt=""></li>
 		</ul>
 		<!-- Slideshow 2 -->
 	</div>
@@ -72,7 +88,7 @@
 					<div class="text list_1_of_2">
 						<h3>Patients</h3>
 						<p>Register & Book Appointment</p>
-						<!-- <div class="button"><span><a href="hms/user-login.php">Click Here</a></span></div> -->
+						
 						<button type="button" class="btn btn-primary"><span><a href="hms/user-login.php" style="text-decoration: none; color:white;">Click Here</a></span></button>
 						
 					</div>
@@ -84,8 +100,11 @@
 					</div>
 					<div class="text list_1_of_2">
 						<h3>Doctors Login</h3>
+                          <br>
+						<!-- <div class="button"><span><a href="hms/doctor/">Click Here</a></span></div> -->
+					<button type="button" class="btn btn-primary"><span><a href="hms/doctor/"
+															style="text-decoration: none; color:white;">Click Here</a></span></button>
 
-						<div class="button"><span><a href="hms/doctor/">Click Here</a></span></div>
 					</div>
 				</div>
 
@@ -97,36 +116,21 @@
 					<div class="text list_1_of_2">
 						<h3>Admin Login</h3>
 
-						<div class="button"><span><a href="hms/admin">Click Here</a></span></div>
+                         <br>
+						<button type="button" class="btn btn-primary"><span><a href="hms/admin/"
+															style="text-decoration: none; color:white;">Click Here</a></span></button>
+
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	<div class="wrap">
-		<div class="content-box">
-			<div class="section group">
-				<div class="col_1_of_3 span_1_of_3 frist">
-
-				</div>
-				<div class="col_1_of_3 span_1_of_3 second">
-
-				</div>
-				<div class="col_1_of_3 span_1_of_3 frist">
-
-
-				</div>
-			</div>
-		</div>
-	</div>
+	
 	<div class="clear"> </div>
 	<div class="footer">
 		<div class="wrap">
-			<div class="footer-left">
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="contact.php">contact</a></li>
-				</ul>
+			<div class="text-center">
+				copyright &#169; 2021. All rights reserved it hub.
 			</div>
 
 			<div class="clear"> </div>
