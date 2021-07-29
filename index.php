@@ -8,7 +8,6 @@
 	<link rel="stylesheet" href="css/responsiveslides.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/stylesheet.css">
-
 	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 	<script src="js/responsiveslides.min.js"></script>
 	<script>
@@ -22,48 +21,11 @@
 			});
 		});
 	</script>
-	<!-- <style>
-		.menu a{
-			text-decoration: none; color: white; font-size: medium;
-			padding: 20px;
-    line-height: 38px;
-    margin-right: 30px;
-		}
-
-		.menu{
-			display: flex;
-    justify-content: flex-end;
-		}
-
-		.navbar{
-			margin-bottom: 0;
-		}
-
-		.text-right{
-			text-align: right;
-		}
-	</style> -->
+	
 </head>
 
 <body>
-			
-			<nav class="navbar navbar-dark bg-primary" style="height: 80px; width:auto;"> 
-				<div class="logo">
-					<a href="index.html" style="font-size: 30px; color: white; text-decoration: none;">Hospital Management system</a>
-				</div>
-				<div class="menu">
-					<a href="index.html">Home</a>
-				
-						<a href="contact.php">contact</a>
-					
-				</div>
-			</nav>
-			<div class="clear"> </div>
-			<!--end-top-nav-->
-		<!-- </div> -->
-		<!--end-header-->
-	<!-- </div> -->
-	<div class="clear"> </div>
+	<?php include'nav.php' ?>	
 	<!--start-image-slider---->
 	<div class="image-slider">
 		<!-- Slideshow 1 -->
@@ -101,7 +63,6 @@
 					<div class="text list_1_of_2">
 						<h3>Doctors Login</h3>
                           <br>
-						<!-- <div class="button"><span><a href="hms/doctor/">Click Here</a></span></div> -->
 					<button type="button" class="btn btn-primary"><span><a href="hms/doctor/"
 															style="text-decoration: none; color:white;">Click Here</a></span></button>
 
@@ -127,16 +88,8 @@
 	</div>
 	
 	<div class="clear"> </div>
-	<div class="footer">
-		<div class="wrap">
-			<div class="text-center">
-				copyright &#169; 2021. All rights reserved it hub.
-			</div>
-
-			<div class="clear"> </div>
-		</div>
-	</div>
-	<!--end-wrap-->
+	
+	<?php include 'footer.php';?>
 </body>
 
 </html>
