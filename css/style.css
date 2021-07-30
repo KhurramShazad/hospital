@@ -234,7 +234,7 @@ body {
 .listview_1_of_3 {
   display: block;
   float: left;
-  margin: 0% 0 0% 1.6%;
+  margin: 1% 1px 0% 5.6%;
   background: #f1f6f9;
 }
 .listimg {
@@ -352,7 +352,7 @@ body {
 .section {
   clear: both;
   padding: 0px;
-  margin: 0px;
+  margin: 25px;
 }
 .group:before,
 .group:after {
