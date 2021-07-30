@@ -1,26 +1,4 @@
-.menu a {
-  text-decoration: none;
-  color: white;
-  font-size: medium;
-  padding: 20px;
-  line-height: 38px;
-  margin-right: 30px;
-}
-
-.menu {
-  display: flex;
-  justify-content: flex-end;
-}
-
-.navbar {
-  margin-bottom: 0;
-}
-
-.text-right {
-  text-align: right;
-}
-
-/* .navbar-brand span {
+.navbar-brand span {
   color: #fed136;
   font-size: 25px;
   font-weight: 700;
@@ -46,4 +24,4 @@
 
 .navbar-nav .nav-item .nav-link:hover {
   color: #fff;
-} */
+}

@@ -2,8 +2,8 @@
 <html>
 
 <head>
-	<title>Hospital Management System</title>
-	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<title>Online Doctor Appointment</title>
+<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/responsiveslides.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -56,7 +56,7 @@
 					</div>
 				</div>
 
-				<div class="listview_1_of_3 images_1_of_3">
+				<div class="listview_1_of_3 images_1_of_3" style="margin: 0% 0 0% 4.6%;">
 					<div class="listimg listimg_1_of_2">
 						<img src="images/grid-img1.png">
 					</div>
@@ -70,7 +70,7 @@
 				</div>
 
 
-				<div class="listview_1_of_3 images_1_of_3">
+				<div class="listview_1_of_3 images_1_of_3" style="margin: 0% 0 0% 5.6%;">
 					<div class="listimg listimg_1_of_2">
 						<img src="images/grid-img2.png">
 					</div>
