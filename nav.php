@@ -2,34 +2,34 @@
 <html>
 
 <head>
-    <title>HMS | Contact us</title>
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
-    <link rel="stylesheet" href="css/stylesheet.css">
+  <title>HMS | Contact us</title>
+  <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+  <link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="css/stylesheet.css">
 </head>
 
 <body>
-    <!--start-wrap-->
+  <!--start-wrap-->
 
-    <!--start-header-->
-    <nav class="navbar navbar-dark bg-primary" style="height: 80px; width:auto;">
+  <!--start-header-->
+  <nav class="navbar navbar-dark bg-primary" style="height: 80px; width:auto;">
     <div class="logo">
-                       <a style="font-size: 25px;  color: white; text-decoration: none; padding-left: 440px; " >Online Doctor Appointment</a>
+      <a style="font-size: 25px;  color: white; text-decoration: none; padding-left: 440px; ">Online Doctor Appointment</a>
 
-        </div>
-        
-        <div class="menu">
-            <a href="index.php">Home</a>
-            <a href="contact.php">contact </a>
-            <a href="about.php">About us</a>
-        </div>
-    </nav>
-    <div class="clear"> </div>
-    <!--end-top-nav-->
-    <!--end-header-->
-<!-- <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top" id="top-nav">
+    </div>
+
+    <div class="menu">
+      <a href="index.php">Home</a>
+      <a href="contact.php">contact </a>
+      <a href="about.php">About us</a>
+    </div>
+  </nav>
+  <div class="clear"> </div>
+  <!--end-top-nav-->
+  <!--end-header-->
+  <!-- <nav class="navbar navbar-dark bg-dark navbar-expand-md fixed-top" id="top-nav">
         <div class="container topNav">
           <a href="#"  class="navbar-brand d-flex w-25 mr-auto"><img src="images/logo 2.png" style="width: 100px; height:100px;"></a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsingNavbar3">
@@ -62,4 +62,5 @@
 
 
 </body>
+
 </html>

@@ -9,8 +9,7 @@ if (isset($_POST['submit'])) {
 	$address = $_POST['address'];
 	$city = $_POST['city'];
 	$gender = $_POST['gender'];
-
-	$sql = mysqli_query($con, "Update users set fullName='$fname',address='$address',city='$city',gender='$gender' where id='" . $_SESSION['id'] . "'");
+	$sql = mysqli_query($con, "Select users set fullName='$fname',address='$address',city='$city',gender='$gender' where id='" . $_SESSION['id'] . "'");
 	if ($sql) {
 		$msg = "Your Profile updated Successfully";
 	}
@@ -54,14 +53,14 @@ if (isset($_POST['submit'])) {
 					<section id="page-title">
 						<div class="row">
 							<div class="col-sm-8">
-								<h1 class="mainTitle">User | Edit Profile</h1>
+								<h1 class="mainTitle">User | Profile</h1>
 							</div>
 							<ol class="breadcrumb">
 								<li>
 									<span>User </span>
 								</li>
 								<li class="active">
-									<span>Edit Profile</span>
+									<span>User Profile</span>
 								</li>
 							</ol>
 						</div>
@@ -79,7 +78,7 @@ if (isset($_POST['submit'])) {
 									<div class="col-lg-8 col-md-12">
 										<div class="panel panel-white">
 											<div class="panel-heading">
-												<h5 class="panel-title">Edit Profile</h5>
+												<h5 class="panel-title">Users Profile</h5>
 											</div>
 											<div class="panel-body">
 												<?php
@@ -97,56 +96,41 @@ if (isset($_POST['submit'])) {
 
 														<div class="form-group">
 															<label for="fname">
-																User Name
+																<b>User Name</b>
 															</label>
-															<input type="text" name="fname" class="form-control" value="<?php echo htmlentities($data['fullName']); ?>">
+
+															<p><?php echo htmlentities($data['fullName']); ?></p>
 														</div>
 
 
 														<div class="form-group">
 															<label for="address">
-																Address
+																<b>Address</b>
 															</label>
-															<textarea name="address" class="form-control"><?php echo htmlentities($data['address']); ?></textarea>
+															<p><?php echo htmlentities($data['address']); ?></p>
 														</div>
 														<div class="form-group">
 															<label for="city">
-																City
+																<b>City</b>
 															</label>
-															<input type="text" name="city" class="form-control" required="required" value="<?php echo htmlentities($data['city']); ?>">
+															<!-- <input type="text" name="city" class="form-control" required="required" value=""> -->
+															<p><?php echo htmlentities($data['city']); ?></p>
 														</div>
 
 														<div class="form-group">
 															<label for="gender">
-																Gender
+																<b>Gender</b>
 															</label>
-
-															<select name="gender" class="form-control" required="required">
-																<option value="<?php echo htmlentities($data['gender']); ?>"><?php echo htmlentities($data['gender']); ?></option>
-																<option value="male">Male</option>
-																<option value="female">Female</option>
-																<option value="other">Other</option>
-															</select>
-
+															<p><?php echo htmlentities($data['gender']); ?></p>
 														</div>
 
 														<div class="form-group">
 															<label for="fess">
-																User Email
+																<b>User Email</b>
 															</label>
-															<input type="email" name="uemail" class="form-control" readonly="readonly" value="<?php echo htmlentities($data['email']); ?>">
-															<a href="change-emaild.php">Update your email id</a>
+
+															<p><?php echo htmlentities($data['email']); ?></p>
 														</div>
-
-
-
-
-
-
-
-														<button type="submit" name="submit" class="btn btn-o btn-primary">
-															Update
-														</button>
 													</form>
 												<?php } ?>
 											</div>

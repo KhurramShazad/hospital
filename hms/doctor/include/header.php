@@ -40,7 +40,7 @@
 				</a>
 				<ul class="dropdown-menu dropdown-dark">
 					<li>
-						<a href="edit-profile.php">
+						<a href="doctor_profile.php">
 							My Profile
 						</a>
 					</li>

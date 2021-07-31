@@ -3,7 +3,7 @@
 
 <head>
 	<title>Online Doctor Appointment</title>
-<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+	<link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
 	<link href='http://fonts.googleapis.com/css?family=Ropa+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/responsiveslides.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -12,7 +12,7 @@
 	<script src="js/responsiveslides.min.js"></script>
 	<script>
 		// You can also use "$(window).load(function() {"
-		$(function () {
+		$(function() {
 
 			// Slideshow 1
 			$("#slider1").responsiveSlides({
@@ -21,11 +21,11 @@
 			});
 		});
 	</script>
-	
+
 </head>
 
 <body>
-	<?php include'nav.php' ?>	
+	<?php include 'nav.php' ?>
 	<!--start-image-slider---->
 	<div class="image-slider">
 		<!-- Slideshow 1 -->
@@ -50,9 +50,9 @@
 					<div class="text list_1_of_2">
 						<h3>Patients</h3>
 						<p>Register & Book Appointment</p>
-						
+
 						<button type="button" class="btn btn-primary"><span><a href="hms/user-login.php" style="text-decoration: none; color:white;">Click Here</a></span></button>
-						
+
 					</div>
 				</div>
 
@@ -62,9 +62,8 @@
 					</div>
 					<div class="text list_1_of_2">
 						<h3>Doctors Login</h3>
-                          <br>
-					<button type="button" class="btn btn-primary"><span><a href="hms/doctor/"
-															style="text-decoration: none; color:white;">Click Here</a></span></button>
+						<br>
+						<button type="button" class="btn btn-primary"><span><a href="hms/doctor/" style="text-decoration: none; color:white;">Click Here</a></span></button>
 
 					</div>
 				</div>
@@ -77,19 +76,18 @@
 					<div class="text list_1_of_2">
 						<h3>Admin Login</h3>
 
-                         <br>
-						<button type="button" class="btn btn-primary"><span><a href="hms/admin/"
-															style="text-decoration: none; color:white;">Click Here</a></span></button>
+						<br>
+						<button type="button" class="btn btn-primary"><span><a href="hms/admin/" style="text-decoration: none; color:white;">Click Here</a></span></button>
 
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
-	
+
 	<div class="clear"> </div>
-	
-	<?php include 'footer.php';?>
+
+	<?php include 'footer.php'; ?>
 </body>
 
 </html>
