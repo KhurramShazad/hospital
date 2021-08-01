@@ -162,7 +162,7 @@ if (isset($_POST['submit'])) {
 														<label for="AppointmentDate">
 															Date
 														</label>
-														<input class="form-control datepicker" name="appdate" required="required" data-date-format="yyyy-mm-dd">
+														<input class="form-control datepicker" name="appdate" required="required" data-date-format="yyyy-mm-dd" autocomplete="off">
 
 													</div>
 
