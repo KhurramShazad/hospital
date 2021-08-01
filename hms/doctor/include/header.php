@@ -30,7 +30,7 @@
 				<a href class="dropdown-toggle" data-toggle="dropdown">
 					<img src="assets/images/images.jpg"> <span class="username">
 
-
+						<?php date_default_timezone_set("Asia/Karachi"); ?>
 
 						<?php $query = mysqli_query($con, "select doctorName from doctors where id='" . $_SESSION['id'] . "'");
 						while ($row = mysqli_fetch_array($query)) {
