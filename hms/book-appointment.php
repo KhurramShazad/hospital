@@ -5,29 +5,27 @@ include('include/config.php');
 include('include/checklogin.php');
 check_login();
 
-if(isset($_POST['submit']))
-{
-	$specilization=$_POST['Doctorspecialization'];
-	$doctorid=$_POST['doctor'];
-	$userid=$_SESSION['id'];
-	$fees=$_POST['fees'];
-	$appdate=$_POST['appdate'];
-	$time=$_POST['apptime'];
-	$userstatus=1;
-	$docstatus=1;
-	$query=mysqli_query($con,"insert into appointment(doctorSpecialization,doctorId,userId,consultancyFees,appointmentDate,appointmentTime,userStatus,doctorStatus) values('$specilization','$doctorid','$userid','$fees','$appdate','$time','$userstatus','$docstatus')");
-	if($query)
-	{
+if (isset($_POST['submit'])) {
+	$specilization = $_POST['Doctorspecialization'];
+	$doctorid = $_POST['doctor'];
+	$userid = $_SESSION['id'];
+	$fees = $_POST['fees'];
+	$appdate = $_POST['appdate'];
+	$time = $_POST['apptime'];
+	$userstatus = 1;
+	$docstatus = 1;
+	$query = mysqli_query($con, "insert into appointment(doctorSpecialization,doctorId,userId,consultancyFees,appointmentDate,appointmentTime,userStatus,doctorStatus) values('$specilization','$doctorid','$userid','$fees','$appdate','$time','$userstatus','$docstatus')");
+	if ($query) {
 		echo "<script>alert('Your appointment successfully booked');</script>";
 	}
-
 }
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<title>User  | Book Appointment</title>
-	
+	<title>User | Book Appointment</title>
+
 	<link href="http://fonts.googleapis.com/css?family=Lato:300,400,400italic,600,700|Raleway:300,400,500,600,700|Crete+Round:400italic" rel="stylesheet" type="text/css" />
 	<link rel="stylesheet" href="vendor/bootstrap/css/bootstrap.min.css">
 	<link rel="stylesheet" href="vendor/fontawesome/css/font-awesome.min.css">
@@ -47,13 +45,13 @@ if(isset($_POST['submit']))
 			$.ajax({
 				type: "POST",
 				url: "get_doctor.php",
-				data:'specilizationid='+val,
-				success: function(data){
+				data: 'specilizationid=' + val,
+				success: function(data) {
 					$("#doctor").html(data);
 				}
 			});
 		}
-	</script>	
+	</script>
 
 
 	<script>
@@ -61,26 +59,27 @@ if(isset($_POST['submit']))
 			$.ajax({
 				type: "POST",
 				url: "get_doctor.php",
-				data:'doctor='+val,
-				success: function(data){
+				data: 'doctor=' + val,
+				success: function(data) {
 					$("#fees").html(data);
 				}
 			});
 		}
-	</script>	
+	</script>
 
 
 
 
 </head>
+
 <body>
-	<div id="app">		
-		<?php include('include/sidebar.php');?>
+	<div id="app">
+		<?php include('include/sidebar.php'); ?>
 		<div class="app-content">
-			
-			<?php include('include/header.php');?>
+
+			<?php include('include/header.php'); ?>
 			<!-- end: TOP NAVBAR -->
-			<div class="main-content" >
+			<div class="main-content">
 				<div class="wrap-content container" id="container">
 					<!-- start: PAGE TITLE -->
 					<section id="page-title">
@@ -96,161 +95,162 @@ if(isset($_POST['submit']))
 									<span>Book Appointment</span>
 								</li>
 							</ol>
-						</section>
-						<!-- end: PAGE TITLE -->
-						<!-- start: BASIC EXAMPLE -->
-						<div class="container-fluid container-fullw bg-white">
-							<div class="row">
-								<div class="col-md-12">
-									
-									<div class="row margin-top-30">
-										<div class="col-lg-8 col-md-12">
-											<div class="panel panel-white">
-												<div class="panel-heading">
-													<h5 class="panel-title">Book Appointment</h5>
-												</div>
-												<div class="panel-body">
-													<p style="color:red;"><?php echo htmlentities($_SESSION['msg1']);?>
-													<?php echo htmlentities($_SESSION['msg1']="");?></p>	
-													<form role="form" name="book" method="post" >
-														
+					</section>
+					<!-- end: PAGE TITLE -->
+					<!-- start: BASIC EXAMPLE -->
+					<div class="container-fluid container-fullw bg-white">
+						<div class="row">
+							<div class="col-md-12">
 
+								<div class="row margin-top-30">
+									<div class="col-lg-8 col-md-12">
+										<div class="panel panel-white">
+											<div class="panel-heading">
+												<h5 class="panel-title">Book Appointment</h5>
+											</div>
+											<div class="panel-body">
+												<p style="color:red;"><?php echo htmlentities($_SESSION['msg1']); ?>
+													<?php echo htmlentities($_SESSION['msg1'] = ""); ?></p>
+												<form role="form" name="book" method="post">
 
-														<div class="form-group">
-															<label for="DoctorSpecialization">
-																Doctor Specialization
-															</label>
-															<select name="Doctorspecialization" class="form-control" onChange="getdoctor(this.value);" required="required">
-																<option value="">Select Specialization</option>
-																<?php $ret=mysqli_query($con,"select * from doctorspecilization");
-																while($row=mysqli_fetch_array($ret))
-																{
+													<div class="form-group">
+														<label for="DoctorSpecialization">
+															Doctor Specialization
+														</label>
+														<select name="Doctorspecialization" class="form-control" onChange="getdoctor(this.value);" required="required">
+															<option value="">Select Specialization</option>
+															<?php $ret = mysqli_query($con, "select * from doctorspecilization");
+															while ($row = mysqli_fetch_array($ret)) {
+
+															?>
+																<option value="<?php echo htmlentities($row['specilization']); ?>">
+																	<?php
+																	echo htmlentities($row['specilization']);
 																	?>
-																	<option value="<?php echo htmlentities($row['specilization']);?>">
-																		<?php echo htmlentities($row['specilization']);?>
-																	</option>
-																<?php } ?>
-																
-															</select>
-														</div>
+																</option>
+															<?php } ?>
+
+														</select>
+													</div>
 
 
 
 
-														<div class="form-group">
-															<label for="doctor">
-																Doctors
-															</label>
-															<select name="doctor" class="form-control" id="doctor" onChange="getfee(this.value);" required="required">
-																<option value="">Select Doctor</option>
-															</select>
-														</div>
+													<div class="form-group">
+														<label for="doctor">
+															Doctors
+														</label>
+														<select name="doctor" class="form-control" id="doctor" onChange="getfee(this.value);" required="required">
+															<option value="">Select Doctor</option>
+														</select>
+													</div>
 
 
 
 
 
-														<div class="form-group">
-															<label for="consultancyfees">
-																Consultancy Fees
-															</label>
-															<select name="fees" class="form-control" id="fees"  readonly>
-																
-															</select>
-														</div>
-														
-														<div class="form-group">
-															<label for="AppointmentDate">
-																Date
-															</label>
-															<input class="form-control datepicker" name="appdate"  required="required" data-date-format="yyyy-mm-dd">
-															
-														</div>
-														
-														<div class="form-group">
-															<label for="Appointmenttime">
-																
-																Time
-																
-															</label>
-															<input class="form-control" name="apptime" id="timepicker1" required="required" placeholder="choose between 10 am to 3 pm">eg : 10:00 AM
-														</div>														
-														
-														<button type="submit" name="submit" class="btn btn-o btn-primary">
-															Submit
-														</button>
-													</form>
-												</div>
+													<div class="form-group">
+														<label for="consultancyfees">
+															Consultancy Fees
+														</label>
+														<select name="fees" class="form-control" id="fees" readonly>
+
+														</select>
+													</div>
+
+													<div class="form-group">
+														<label for="AppointmentDate">
+															Date
+														</label>
+														<input class="form-control datepicker" name="appdate" required="required" data-date-format="yyyy-mm-dd">
+
+													</div>
+
+													<div class="form-group">
+														<label for="Appointmenttime">
+
+															Time
+
+														</label>
+														<input class="form-control" name="apptime" id="timepicker1" required="required" placeholder="choose between 10 am to 3 pm">eg : 10:00 AM
+													</div>
+
+													<button type="submit" name="submit" class="btn btn-o btn-primary">
+														Submit
+													</button>
+												</form>
 											</div>
 										</div>
-										
 									</div>
+
 								</div>
-								
 							</div>
+
 						</div>
-						
-						<!-- end: BASIC EXAMPLE -->
-						
-						
-						
-						
-						
-						
-						<!-- end: SELECT BOXES -->
-						
 					</div>
+
+					<!-- end: BASIC EXAMPLE -->
+
+
+
+
+
+
+					<!-- end: SELECT BOXES -->
+
 				</div>
 			</div>
-			<!-- start: FOOTER -->
-			<?php include('include/footer.php');?>
-			<!-- end: FOOTER -->
-			
-			<!-- start: SETTINGS -->
-			<?php include('include/setting.php');?>
-			
-			<!-- end: SETTINGS -->
 		</div>
-		<!-- start: MAIN JAVASCRIPTS -->
-		<script src="vendor/jquery/jquery.min.js"></script>
-		<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-		<script src="vendor/modernizr/modernizr.js"></script>
-		<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
-		<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
-		<script src="vendor/switchery/switchery.min.js"></script>
-		<!-- end: MAIN JAVASCRIPTS -->
-		<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<script src="vendor/maskedinput/jquery.maskedinput.min.js"></script>
-		<script src="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
-		<script src="vendor/autosize/autosize.min.js"></script>
-		<script src="vendor/selectFx/classie.js"></script>
-		<script src="vendor/selectFx/selectFx.js"></script>
-		<script src="vendor/select2/select2.min.js"></script>
-		<script src="vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
-		<script src="vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
-		<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
-		<!-- start: CLIP-TWO JAVASCRIPTS -->
-		<script src="assets/js/main.js"></script>
-		<!-- start: JavaScript Event Handlers for this page -->
-		<script src="assets/js/form-elements.js"></script>
-		<script>
-			jQuery(document).ready(function() {
-				Main.init();
-				FormElements.init();
-			});
+		<!-- start: FOOTER -->
+		<?php include('include/footer.php'); ?>
+		<!-- end: FOOTER -->
 
-			$('.datepicker').datepicker({
-				format: 'yyyy-mm-dd',
-				startDate: 'd'
-			});
-		</script>
-		<script type="text/javascript">
-			$('#timepicker1').timepicker();
-		</script>
-		<!-- end: JavaScript Event Handlers for this page -->
-		<!-- end: CLIP-TWO JAVASCRIPTS -->
+		<!-- start: SETTINGS -->
+		<?php include('include/setting.php'); ?>
 
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+		<!-- end: SETTINGS -->
+	</div>
+	<!-- start: MAIN JAVASCRIPTS -->
+	<script src="vendor/jquery/jquery.min.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="vendor/modernizr/modernizr.js"></script>
+	<script src="vendor/jquery-cookie/jquery.cookie.js"></script>
+	<script src="vendor/perfect-scrollbar/perfect-scrollbar.min.js"></script>
+	<script src="vendor/switchery/switchery.min.js"></script>
+	<!-- end: MAIN JAVASCRIPTS -->
+	<!-- start: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<script src="vendor/maskedinput/jquery.maskedinput.min.js"></script>
+	<script src="vendor/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+	<script src="vendor/autosize/autosize.min.js"></script>
+	<script src="vendor/selectFx/classie.js"></script>
+	<script src="vendor/selectFx/selectFx.js"></script>
+	<script src="vendor/select2/select2.min.js"></script>
+	<script src="vendor/bootstrap-datepicker/bootstrap-datepicker.min.js"></script>
+	<script src="vendor/bootstrap-timepicker/bootstrap-timepicker.min.js"></script>
+	<!-- end: JAVASCRIPTS REQUIRED FOR THIS PAGE ONLY -->
+	<!-- start: CLIP-TWO JAVASCRIPTS -->
+	<script src="assets/js/main.js"></script>
+	<!-- start: JavaScript Event Handlers for this page -->
+	<script src="assets/js/form-elements.js"></script>
+	<script>
+		jQuery(document).ready(function() {
+			Main.init();
+			FormElements.init();
+		});
 
-	</body>
-	</html>
+		$('.datepicker').datepicker({
+			format: 'yyyy-mm-dd',
+			startDate: 'd'
+		});
+	</script>
+	<script type="text/javascript">
+		$('#timepicker1').timepicker();
+	</script>
+	<!-- end: JavaScript Event Handlers for this page -->
+	<!-- end: CLIP-TWO JAVASCRIPTS -->
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.0/jquery.min.js"></script>
+
+</body>
+
+</html>

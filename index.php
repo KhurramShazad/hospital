@@ -51,7 +51,7 @@
 						<h3>Patients</h3>
 						<p>Register & Book Appointment</p>
 
-						<button type="button" class="btn btn-primary"><span><a href="hms/user-login.php" style="text-decoration: none; color:white;">Click Here</a></span></button>
+						<button type="button" class="btn btn-primary"><span><a href="./hms/user-login.php" style="text-decoration: none; color:white;">Click Here</a></span></button>
 
 					</div>
 				</div>
@@ -63,7 +63,7 @@
 					<div class="text list_1_of_2">
 						<h3>Doctors Login</h3>
 						<br>
-						<button type="button" class="btn btn-primary"><span><a href="hms/doctor/" style="text-decoration: none; color:white;">Click Here</a></span></button>
+						<button type="button" class="btn btn-primary"><span><a href="./hms/doctor" style="text-decoration: none; color:white;">Click Here</a></span></button>
 
 					</div>
 				</div>
@@ -77,7 +77,7 @@
 						<h3>Admin Login</h3>
 
 						<br>
-						<button type="button" class="btn btn-primary"><span><a href="hms/admin/" style="text-decoration: none; color:white;">Click Here</a></span></button>
+						<button type="button" class="btn btn-primary"><span><a href="./hms/admin" style="text-decoration: none; color:white;">Click Here</a></span></button>
 
 					</div>
 				</div>

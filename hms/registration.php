@@ -35,6 +35,7 @@ if (isset($_POST['submit'])) {
 
 	<script type="text/javascript">
 		function valid() {
+
 			if (document.registration.password.value != document.registration.password_again.value) {
 				alert("Password and Confirm Password Field do not match  !!");
 				document.registration.password_again.focus();
@@ -58,7 +59,7 @@ if (isset($_POST['submit'])) {
 			</div>
 			<!-- start: REGISTER BOX -->
 			<div class="box-register">
-				<form name="registration" id="registration" method="post" onSubmit="return valid();">
+				<form name="registration" id="registration" method="post" onSubmit="return valid();" class="form-login">
 					<fieldset>
 						<legend>
 							Sign Up
